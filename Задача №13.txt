@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите строку : I love java 8 Я люблю java 14 core1");
+        String s = scanner.nextLine();
+
+        String str1 = s.replaceAll("([А-Яа-я0-9\\s]+)", " ");
+
+        System.out.println("Cлова, состоящие только из латиницы : "  + str1);
+        String[] res = str1.split(" ");
+        System.out.println("Количество латинских слов : "  + res.length);
+    }
+}
